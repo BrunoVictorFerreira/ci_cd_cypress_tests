@@ -23,8 +23,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./ci_cd_cypress_tests
 
       - name: Run Cypress tests
         run: npm run cypress:headless
-        working-directory: ./ci_cd_cypress_tests
