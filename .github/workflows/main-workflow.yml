@@ -3,10 +3,7 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "ci_cd_cypress_tests/**.js"
-      - "ci_cd_cypress_tests/**.json"
-      - "ci_cd_cypress_tests/**.yml"
+  workflow_dispatch:
 
 jobs:
   ci_cd_cypress_tests-tests:
