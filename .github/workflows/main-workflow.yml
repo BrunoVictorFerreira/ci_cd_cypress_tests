@@ -7,6 +7,7 @@ on:
       - "in-class-project/**.js"
       - "in-class-project/**.json"
       - "in-class-project/**.yml"
+  workflow_dispatch:
 
 jobs:
   in-class-project-tests:
