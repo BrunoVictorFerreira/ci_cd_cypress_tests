@@ -4,13 +4,13 @@ on:
     branches:
       - main
     paths:
-      - "in-class-project/**.js"
-      - "in-class-project/**.json"
-      - "in-class-project/**.yml"
+      - "ci_cd_cypress_tests/**.js"
+      - "ci_cd_cypress_tests/**.json"
+      - "ci_cd_cypress_tests/**.yml"
   workflow_dispatch:
 
 jobs:
-  in-class-project-tests:
+  ci_cd_cypress_tests-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -23,8 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./in-class-project
+        working-directory: ./ci_cd_cypress_tests
 
       - name: Run Cypress tests
         run: npm run cypress:headless
-        working-directory: ./in-class-project
+        working-directory: ./ci_cd_cypress_tests
