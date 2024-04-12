@@ -1,4 +1,4 @@
-name: Cypress Tests - Complete Project
+name: Cypress Tests - In Class Project
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   in-class-project-tests:
-    runs-on: buntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -22,10 +22,10 @@ jobs:
         with:
           node-version: 20.12.1
 
-      - name: Install Dependencies
-        run: npm Install
+      - name: Install dependencies
+        run: npm install
         working-directory: ./in-class-project
 
-      - name: Run Cypress Tests
+      - name: Run Cypress tests
         run: npm run cypress:headless
         working-directory: ./in-class-project
